@@ -1,0 +1,16 @@
+### Project Specific  ###
+./*/*
+!./*/*.go
+!./*/*.md
+!./*/*.mod
+
+### Go Cruft ###
+/Godeps/
+/vendor/
+*.dll
+*.dylib
+*.exe
+*.exe~
+*.out
+*.so
+*.test
