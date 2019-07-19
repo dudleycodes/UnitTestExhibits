@@ -19,7 +19,7 @@ func loadDinner(e entree, s salad, d mainDish) {
 	}
 
 	if s.isVegetarian && d.isVegetarian {
-		result.isVegatarian = true
+		result.hasFruit = true
 	}
 
 	// Push to Remote data source
