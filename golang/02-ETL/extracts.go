@@ -2,11 +2,11 @@ package main
 
 import "time"
 
-func extractEntree() entree {
+func extractAppetizer() appetizer {
 	// Mock function; normally would return from remote data source
 	time.Sleep(1000 * time.Millisecond)
 
-	return entree{
+	return appetizer{
 		hasCheese: true,
 		hasFruit:  false,
 		name:      "Cheesey Bread",
@@ -24,11 +24,11 @@ func extractSalad() salad {
 	}
 }
 
-func extractMainDish() mainDish {
+func extractEntree() entree {
 	// Mock function; normally would return from remote data source
 	time.Sleep(1250 * time.Millisecond)
 
-	return mainDish{
+	return entree{
 		hasCheese:    false,
 		isVegetarian: false,
 		name:         "Butter-Roasted Rib Eye Steak",

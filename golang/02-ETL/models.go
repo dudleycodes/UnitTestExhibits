@@ -1,6 +1,6 @@
 package main
 
-type entree struct {
+type appetizer struct {
 	hasCheese bool
 	hasFruit  bool
 	name      string
@@ -12,7 +12,7 @@ type salad struct {
 	name         string
 }
 
-type mainDish struct {
+type entree struct {
 	hasCheese    bool
 	isVegetarian bool
 	name         string
@@ -21,6 +21,6 @@ type mainDish struct {
 type fullDinner struct {
 	hasCheese    bool
 	hasFruit     bool
-	isVegatarian bool
+	isVegetarian bool
 	name         string
 }

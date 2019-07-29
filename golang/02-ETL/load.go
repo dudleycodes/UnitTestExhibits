@@ -5,20 +5,20 @@ import (
 	"time"
 )
 
-func loadDinner(e entree, s salad, d mainDish) {
+func loadDinner(a appetizer, s salad, e entree) {
 	result := fullDinner{
-		name: fmt.Sprintf("%q with %q salad and a starter of %q.", d.name, s.name, e.name),
+		name: fmt.Sprintf("%q with %q salad and a starter of %q.", e.name, s.name, a.name),
 	}
 
-	if e.hasCheese || d.hasCheese {
+	if a.hasCheese || e.hasCheese {
 		result.hasCheese = true
 	}
 
-	if e.hasFruit || s.hasFruit {
+	if a.hasFruit || s.hasFruit {
 		result.hasFruit = true
 	}
 
-	if s.isVegetarian && d.isVegetarian {
+	if s.isVegetarian && e.isVegetarian {
 		result.hasFruit = true
 	}
 

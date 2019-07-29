@@ -5,10 +5,10 @@ import (
 )
 
 func main() {
-	// Entree
-	fmt.Println("Getting entree from origin database....")
-	e := extractEntree()
-	fmt.Println("Got:", e.name)
+	// Appetizer
+	fmt.Println("Getting appetizer from origin database....")
+	a := extractAppetizer()
+	fmt.Println("Got:", a.name)
 	fmt.Println()
 
 	// Salad
@@ -17,14 +17,14 @@ func main() {
 	fmt.Println("Got:", s.name)
 	fmt.Println()
 
-	// Main Dish
-	fmt.Println("Getting main dish from origin database...")
-	d := extractMainDish()
-	fmt.Println("Got:", d.name)
+	// Entree
+	fmt.Println("Getting entree from origin database...")
+	e := extractEntree()
+	fmt.Println("Got:", e.name)
 	fmt.Println()
 
 	// Loading
 	fmt.Println("Sending courses to destination database...")
-	loadDinner(e, s, d)
+	loadDinner(a, s, e)
 	fmt.Println()
 }
