@@ -12,7 +12,7 @@
 
 ## Code Coverage
 
-> Remember: the *only* absolute conclusion that can be made from code coverage is that code with zero coverage isn't unit tested at all. Code coverage does not guarantee the unit tests themselves are accurate and/or comprehensive.
+> Remember: the *only* absolute conclusion that can be made is that code with zero coverage isn't unit tested at all. Code coverage does not guarantee the unit tests themselves are accurate and/or comprehensive.
 
 | Action                        | Command                                     | Notes                                                                        |
 | ----------------------------- | ------------------------------------------- | ---------------------------------------------------------------------------- |
