@@ -2,13 +2,13 @@
 
 ## Unit Tests
 
-| Action                       | Command                          | Notes                                                 |
-| ---------------------------- | -------------------------------- | ----------------------------------------------------- |
-| Run tests in directory       | `go test .`                      |                                                       |
-| Run tests in directory tree  | `go test ./...`                  |                                                       |
-| Run tests matching regex     | `go test ./... --run=NameOfTest` |                                                       |
-| Run tests in specific file   | `go test ./file_test.go file.go` | Include the file the test depends on for compilation. |
-| Clean test cache             | `go clean --testcache`           |                                                       |
+| Action                       | Command                            | Notes                                                 |
+| ---------------------------- | ---------------------------------- | ----------------------------------------------------- |
+| Run tests in directory       | `go test .`                        |                                                       |
+| Run tests in directory tree  | `go test ./...`                    |                                                       |
+| Run tests matching regex     | `go test ./... --run=NameOfTest`   |                                                       |
+| Run tests in specific file   | `go test ./file_test.go ./file.go` | Include the file the test depends on for compilation. |
+| Clean test cache             | `go clean --testcache`             |                                                       |
 
 ## Code Coverage
 
