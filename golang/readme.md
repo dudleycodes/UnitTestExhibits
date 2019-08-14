@@ -30,14 +30,14 @@
 
 > Beware high P-Values ([wikipedia](https://en.wikipedia.org/wiki/P-value)); benchmark results with a p-value greater than 0.05 are *probably* useless.
 
-| Action                                       | Command                                            | Notes                                                                                                   |
-| -------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Run benchmarks in directory                  | `go test . --bench=.`                              | Also runs unit tests in directory.                                                                      |
-| Run benchmarks in directory tree             | `go test ./... --bench=.`                          | Also runs unit tests in directory tree.                                                                 |
-| Run *only* benchmarks in directory tree      | `go test ./... --run=^$ --bench=. `                | Works by using a regex that matches nothing.                                                            |
-| Run benchmarks matching regex                | `go test ./... --bench=NameOfTest`                 |                                                                                                         |
-| Run benchmarks matching regex for 20 seconds | `go test ./... --bench=NameOfTest --benchtime=20s` | Increasing benchmark duration is *usually* the best way to reduce p-values for long-running functions.  |
-| Run benchmarks matching regex 10 times       | `go test ./... --bench=NameOfTest --count=10`      | Increasing iterations is *usually* the best way to reduce p-values for short-running functions.         |
+| Action                                       | Command                                            | Notes                                                                                                 |
+| -------------------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Run benchmarks in directory                  | `go test . --bench=.`                              | Also runs unit tests in directory.                                                                    |
+| Run benchmarks in directory tree             | `go test ./... --bench=.`                          | Also runs unit tests in directory tree.                                                               |
+| Run *only* benchmarks in directory tree      | `go test ./... --run=^$ --bench=. `                | Works by using a regex that matches nothing.                                                          |
+| Run benchmarks matching regex                | `go test ./... --bench=NameOfTest`                 |                                                                                                       |
+| Run benchmarks matching regex for 20 seconds | `go test ./... --bench=NameOfTest --benchtime=20s` | Increasing the test duration is *usually* the best way to reduce p-values for long-running functions. |
+| Run benchmarks matching regex 10 times       | `go test ./... --bench=NameOfTest --count=10`      | Increasing iterations is *usually* the best way to reduce p-values for short-running functions.       |
 
 ### Comparing Benchmarks
 
