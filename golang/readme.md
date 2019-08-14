@@ -35,6 +35,7 @@ go test ./...
 - [Golang basics - writing unit tests](https://blog.alexellis.io/golang-writing-unit-tests/)
 - [Prefer table driven tests](https://dave.cheney.net/2019/05/07/prefer-table-driven-tests)
 - [A pattern for Go tests](https://medium.com/@pierreprinetti/a-pattern-for-go-tests-3468b51535)
+- [Unit testing HTTP servers (video)](https://www.youtube.com/watch?v=hVFEV-ieeew)
 
 ### Benchmark Testing
 
