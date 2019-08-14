@@ -1,9 +1,15 @@
 {
     "cSpell.words": [
+        "benchstat",
+        "benchtime",
         "cheatsheet",
         "cheesey",
+        "covermode",
+        "coverprofile",
+        "heatmap",
         "neighborino",
         "nums",
+        "testcache",
         "walkthrough"
     ]
 }

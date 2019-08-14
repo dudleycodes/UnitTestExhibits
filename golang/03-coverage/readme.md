@@ -7,10 +7,10 @@
 Open a terminal shell into this directory (`03-coverage`).
 
 **See Basic Coverage Report**
-> `go test --cover`
+> `go test . --cover`
 
 **Save the Coverage Report to `coverage.out`**
-> `go test --coverprofile=coverage.out`
+> `go test . --coverprofile=coverage.out`
 
 **See the Basic `coverage.out` Contents**
 > `go tool cover --func=coverage.out`
