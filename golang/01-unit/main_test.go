@@ -4,15 +4,15 @@ import (
 	"testing"
 )
 
-// This test does its job but when it fails we don't get any information about why or how.
+// This test does its job, but when it fails we don't get any information about why or how.
 func Test_01_Bad_Sum(t *testing.T) {
 	if Sum(1, 2, 3, 4) != 10 || Sum(1, 2, 3, 4, -5) != 5 || Sum(2, -5) != -3 {
 		t.Fail()
 	}
 }
 
-// This test works and give us some information about what failed but the code is tedious to
-// not only to add/edit/remove test cases, but also to read.
+// This test works and gives us some information about what failed, but the code is tedious not only
+// for adding/editing/removing test cases, but also to read.
 func Test_02_Tedious_Sum(t *testing.T) {
 	// test case 1 -- basic addition
 	actual, expected := Sum(1, 2, 3, 4), 10
@@ -34,8 +34,8 @@ func Test_02_Tedious_Sum(t *testing.T) {
 }
 
 // This test works and cuts out a lot of the tedium but:
-//	• it's hard to add/edit/remove test cases because it mixes the test-data with logic. When writing
-//	  tests we only want to focus on the testing data (inputs/outputs).
+//	• it's hard to add/edit/remove test cases because it mixes the test-data with logic. When
+//		writing tests, we only want to focus on the testing data (inputs/outputs).
 //	• the test results still don't show us what inputs break things (only shows expected/actual)
 func Test_03_LessTedious_Sum(t *testing.T) {
 	testAreEqual := func(actual, expected int) {
@@ -50,8 +50,8 @@ func Test_03_LessTedious_Sum(t *testing.T) {
 	testAreEqual(Sum(2, -5), -3)         // test case 3 - negative result
 }
 
-//This "table test" works; by isolating the logic we can focus just on test data when add/editing/removing. More importantly
-//we can show all data round test failures.
+// This "table test" works; by isolating the logic we can focus just on test data when adding/editing/removing.
+// More importantly, we can show all data around test failures.
 func Test_04_TableTest_Sum(t *testing.T) {
 	tests := []struct {
 		inputs   []int
@@ -70,8 +70,9 @@ func Test_04_TableTest_Sum(t *testing.T) {
 	}
 }
 
-// Named table tests have all the benefits of normal table tests. By providing each test case with a name we can ensure the motivations
-// behind the tests are also displayed in the test results (and not just code comments like the earlier examples).
+// Named table tests have all the benefits of normal table tests. By providing each test case with a name, we
+// can ensure the motivations behind the tests are also displayed in the test results (and not just code comments
+// like the earlier examples).
 func Test_05_NamedTableTest_Sum(t *testing.T) {
 	tests := map[string]struct {
 		inputs   []int
