@@ -6,7 +6,7 @@ import (
 
 func main() {
 	// Appetizer
-	fmt.Println("Getting appetizer from origin database....")
+	fmt.Println("\nGetting appetizer from origin database....")
 	a := extractAppetizer()
 	fmt.Println("Got:", a.name)
 	fmt.Println()

@@ -1,4 +1,4 @@
-module github.com/dudleycodes/UnitTestExhibits/03-coverage
+module github.com/dudleycodes/UnitTestExhibits/02-coverage
 
 go 1.12
 

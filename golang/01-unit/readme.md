@@ -2,7 +2,13 @@
 
 ## About
 
-This example shows some different methods of writing unit test for a simple function; along with their pros and cons.
+This example shows some different methods of writing unit test for a simple function; along with their pros and cons. The app under testing takes a series of 32-bit integers from the command line, and displays their sum and average.
+
+```shell
+MASCHEEN:01-unit user$ go run . 8 6 7 5 3 0 9
+The average of those integers is: 5
+Those integers add up to: 38
+```
 
 ## Walkthrough
 
