@@ -27,7 +27,7 @@ func main() {
 	}
 
 	avg := Average(integers...)
-	fmt.Printf("The aveage of those integers is: %d\n", avg)
+	fmt.Printf("The average of those integers is: %d\n", avg)
 
 	sum := Sum(integers...)
 	fmt.Printf("Those integers add up to: %d\n", sum)
@@ -51,7 +51,7 @@ func Sum(nums ...int) int {
 	for _, n := range nums {
 		//For demonstrating test results
 		if n < 0 {
-			//return 0
+			return 0
 		}
 
 		r += n
