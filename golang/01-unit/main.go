@@ -26,10 +26,10 @@ func main() {
 		integers = append(integers, i)
 	}
 
-	avg := average(integers...)
+	avg := Average(integers...)
 	fmt.Printf("The aveage of those integers is: %d\n", avg)
 
-	sum := sum(integers...)
+	sum := Sum(integers...)
 	fmt.Printf("Those integers add up to: %d\n", sum)
 }
 
@@ -39,7 +39,7 @@ func Average(nums ...int) int {
 		return 0
 	}
 
-	sum := sum(nums...)
+	sum := Sum(nums...)
 
 	return sum / len(nums)
 }
