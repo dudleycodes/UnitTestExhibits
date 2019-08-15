@@ -3,6 +3,8 @@
 !./*/*.go
 !./*/*.md
 !./*/*.mod
+*.o
+*.txt
 
 ### Go Cruft ###
 /Godeps/

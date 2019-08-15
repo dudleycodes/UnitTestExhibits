@@ -42,10 +42,10 @@
 ### Comparing Benchmarks
 
 1. Install Russ Cox's [benchstat](https://godoc.org/golang.org/x/perf/cmd/benchstat) utility: `go get golang.org/x/perf/cmd/benchstat`.
-2. Run the benchmark saving the results to a text file: `go test ./... --bench=NameOfTest --count=10 > original.out`.
+2. Run the benchmark saving the results to a text file: `go test ./... --bench=NameOfTest --count=10 > original.txt`.
 3. Make your changes to the function under benchmark testing.
-4. Re-run the *same* benchmark saving the results to a different text file: `go test ./... --bench=NameOfTest --count=10 > refactor.out`.
-5. Compare using the benchstat util: `benchstat original.out refactor.out`.
+4. Re-run the *same* benchmark saving the results to a different text file: `go test ./... --bench=NameOfTest --count=10 > refactor.txt`.
+5. Compare using the benchstat util: `benchstat original.txt refactor.txt`.
 
 ## Additional Reading
 
