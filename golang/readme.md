@@ -36,8 +36,8 @@
 | Run benchmarks in directory tree             | `go test ./... --bench=.`                          | Also runs unit tests in directory tree.                                                               |
 | Run *only* benchmarks in directory tree      | `go test ./... --run=^$ --bench=. `                | Works by using a regex that matches nothing.                                                          |
 | Run benchmarks matching regex                | `go test ./... --bench=NameOfTest`                 |                                                                                                       |
-| Run benchmarks matching regex for 20 seconds | `go test ./... --bench=NameOfTest --benchtime=20s` | Increasing the test duration is *usually* the best way to reduce p-values for long-running functions. |
-| Run benchmarks matching regex 10 times       | `go test ./... --bench=NameOfTest --count=10`      | Increasing iterations is *usually* the best way to reduce p-values for short-running functions.       |
+| Run benchmarks matching regex for 20 seconds | `go test ./... --bench=NameOfTest --benchtime=20s` | Increasing the test duration is *usually* the best way to reduce p-values for **long**-running functions. |
+| Run benchmarks matching regex 10 times       | `go test ./... --bench=NameOfTest --count=10`      | Increasing iterations is *usually* the best way to reduce p-values for **short**-running functions.       |
 
 ### Comparing Benchmarks
 
@@ -55,8 +55,9 @@
 
 - [Golang basics - writing unit tests](https://blog.alexellis.io/golang-writing-unit-tests/) ([mirror](https://archive.is/AmW1I))
 - [Prefer table driven tests](https://dave.cheney.net/2019/05/07/prefer-table-driven-tests) ([mirror](https://archive.is/ufGU1))
-- [Unit testing HTTP servers](https://www.youtube.com/watch?v=hVFEV-ieeew)
+- [Testable Examples in Go](https://blog.golang.org/examples) ([mirror](https://archive.is/nbFGf))
 - [A pattern for Go tests](https://medium.com/@pierreprinetti/a-pattern-for-go-tests-3468b51535) ([mirror](https://archive.is/4aVtQ))
+- [Unit testing HTTP servers](https://www.youtube.com/watch?v=hVFEV-ieeew)
 
 ### Code Coverage
 

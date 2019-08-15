@@ -1,6 +1,8 @@
 # GO Test Coverage Example
 
-> Notes: The code in this module is broken and uses ant-patterns; it is intended to be used for a demo on code coverage and nothing more.
+## About
+
+This example demonstrates generate and reading code coverage reports.  The code in this module is *purposely* broken and uses anti-patterns -- it should not be used for anything real.
 
 ## Walkthrough
 
