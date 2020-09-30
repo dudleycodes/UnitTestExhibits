@@ -12,7 +12,8 @@ func Test_Fib(t *testing.T) {
 		t.Run(fmt.Sprintf("%d", input), func(t *testing.T) {
 			actual := fib(input)
 			if actual != expected {
-				t.Errorf("With an input of %d expected an output of %d but got %d.", input, expected, actual)
+				t.Errorf("With an input of %d expected an output of %d but got %d.", input, expected,
+					actual)
 			}
 		})
 	}

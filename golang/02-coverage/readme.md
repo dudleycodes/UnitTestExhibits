@@ -2,7 +2,8 @@
 
 ## About
 
-This example demonstrates generating and reading code coverage reports. The app under testing takes a 32-bit integer from the command line and displays the place values for each digit.
+This example demonstrates generating and reading code coverage reports. The app under testing takes
+a 32-bit integer from the command line and displays the place values for each digit.
 
 ```shell
 MASCHEEN:01-unit user$ go run . 1984
@@ -15,7 +16,8 @@ The place values for the number 1,984 are:
         4 - ones
 ```
 
-***The code in this module is *intentionally* broken and uses anti-patterns -- it should not be used for anything real.***
+***The code in this module is *intentionally* broken and uses anti-patterns -- it should not be used
+for anything real.***
 
 ## Walkthrough
 

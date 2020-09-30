@@ -46,7 +46,7 @@ func TestMain(m *testing.M) {
 		os.Exit(1)
 	}
 
-	closer, err := startPostgreSQL(port)
+	closer, err := startPostgreContainer(port)
 	if err != nil {
 		fmt.Printf("Failed to create Docker container for %s: %s", _dockerImage, err.Error())
 		os.Exit(1)
@@ -70,18 +70,25 @@ func TestMain(m *testing.M) {
 	for i := 0; ; i++ {
 		time.Sleep(2 * time.Second)
 
-		if _sut.Ping() == true {
+		err := _sut.database.Ping()
+
+		if err == nil {
 			break
 		}
 
 		if i > 6 {
-			fmt.Printf("PostgreSQL broker was unable to ping remote service in %d attempts", i)
+			fmt.Printf("PostgreSQL broker was unable to ping remote service in %d attempts: %s", i,
+				err.Error())
 			closer()
 			os.Exit(1)
 		}
 	}
 
 	exitCode := m.Run()
+
+	if err := _sut.Close(); err != nil {
+		fmt.Printf("Failed to properly close PostgreSQL agent: %s", err.Error())
+	}
 
 	closer()
 	os.Exit(exitCode)
@@ -116,7 +123,9 @@ func TestRowCount(t *testing.T) {
 
 	t.Run("table with 6 rows should count 6 rows", func(t *testing.T) {
 		for i := 0; i < 6; i++ {
-			if _, err := _sut.database.Exec(fmt.Sprintf("INSERT INTO %s (k) VALUES ('%d')", tableName, i)); err != nil {
+			_, err := _sut.database.Exec(fmt.Sprintf("INSERT INTO %s (k) VALUES ('%d')", tableName, i))
+
+			if err != nil {
 				t.Fatalf("Failed to insert row with k = `%d`", i)
 			}
 		}
@@ -133,8 +142,8 @@ func TestRowCount(t *testing.T) {
 	})
 }
 
-// start up an instance of PostgreSQL in a Docker container; returns a function to stop and remove it.
-func startPostgreSQL(port int) (closer func(), err error) {
+// start up an instance of PostgreSQL in a Docker container, returning a function to stop and remove it.
+func startPostgreContainer(port int) (closer func(), err error) {
 	dockerClient, err := client.NewEnvClient()
 	if err != nil {
 		return nil, fmt.Errorf("Failed to get docker client, %w", err)

@@ -65,7 +65,8 @@ func Test_04_TableTest_Sum(t *testing.T) {
 	for _, test := range tests {
 		actual := Sum(test.inputs...)
 		if actual != test.expected {
-			t.Errorf("Sum of %v should have resulted in the value of %d not %d", test.inputs, test.expected, actual)
+			t.Errorf("Sum of %v should have resulted in the value of %d not %d", test.inputs, test.expected,
+				actual)
 		}
 	}
 }
@@ -87,7 +88,8 @@ func Test_05_NamedTableTest_Sum(t *testing.T) {
 		t.Run(caseName, func(t *testing.T) {
 			actual := Sum(test.inputs...)
 			if actual != test.expected {
-				t.Errorf("Sum of %v should have resulted in the value of %d not %d", test.inputs, test.expected, actual)
+				t.Errorf("Sum of %v should have resulted in the value of %d not %d", test.inputs,
+					test.expected, actual)
 			}
 		})
 	}

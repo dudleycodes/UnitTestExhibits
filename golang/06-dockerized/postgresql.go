@@ -1,3 +1,5 @@
+// Package postgresql is a toy package for use in demonstrating how Docker containers can be used to automate some Go
+// integration tests.
 package postgresql
 
 import (
@@ -57,13 +59,4 @@ func (bkr *Broker) RowCount(tableName string) (int, error) {
 	}
 
 	return count, nil
-}
-
-// Ping the remote PostgreSQL database, return a value indicating whethere a response was received.
-func (bkr *Broker) Ping() bool {
-	return bkr.ping() == nil
-}
-
-func (bkr *Broker) ping() error {
-	return bkr.database.Ping()
 }

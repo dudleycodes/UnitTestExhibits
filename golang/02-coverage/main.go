@@ -1,4 +1,5 @@
-//package main is code for demonstrating test coverage with the `go test` tool. Never write *real*, production code like this! ಠ_ಠ
+// package main is code for demonstrating test coverage with the `go test` tool. Never write *real*, production code
+// like this! ಠ_ಠ
 package main
 
 import (

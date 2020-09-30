@@ -12,5 +12,13 @@
         "nums",
         "testcache",
         "walkthrough"
-    ]
+    ],
+    "files.encoding": "utf8",
+    "files.eol": "\n",
+    "[go]": {
+        "editor.rulers": [120],
+    },
+    "[markdown]": {
+        "editor.rulers": [100],
+    },
 }

@@ -1,5 +1,5 @@
-// YOU SHOULD NEVER HAVE FILES NAMED THINGS Like "utils", "helpers", etc (see: https://dave.cheney.net/2019/01/08/avoid-package-names-like-base-util-or-common)
-// This was done simply for the demo
+// YOU SHOULD NEVER HAVE FILES NAMED THINGS Like "utils", "helpers", etc (see:
+// https://dave.cheney.net/2019/01/08/avoid-package-names-like-base-util-or-common). This was done simply for the demo
 package main
 
 func getPlaceValue(n int) string {
