@@ -50,9 +50,9 @@ func Sum(nums ...int) int {
 
 	for _, n := range nums {
 		//For demonstrating test results
-		if n < 0 {
-			return 0
-		}
+		// if n < 0 {
+		// 	return 0
+		// }
 
 		r += n
 	}
