@@ -41,6 +41,9 @@ utility via `go get golang.org/x/perf/cmd/benchstat`.
 
 Now let's compare the results of our two tests: `benchstat original.txt refactor.txt`
 
+> Note: Make sure the `GOPATH` has been added to your environment's path, e.g.
+`export PATH=$PATH:$(go env GOPATH)/bin`
+
 ## Warnings
 
 **THE BEST OPTIMIZATIONS ARE THOSE THAT MAKE CODE THE EASIEST TO MAINTAIN AND THE EASIEST TO
