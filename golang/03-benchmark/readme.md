@@ -31,7 +31,7 @@ Using block comments (`/*` and `*/`), comment out the bottom `fib()` function an
 `fib()` function.  Re-run the test, saving the results to a new results file:
 
 ```shell
-go test --bench=. --count=6 | tee refactor.txt`
+go test --bench=. --count=6 | tee refactor.txt
 ```
 
 ### Compare the Results
