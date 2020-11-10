@@ -3,6 +3,7 @@ package product
 import (
 	"errors"
 	"fmt"
+	"strings"
 	"testing"
 	"time"
 
@@ -70,4 +71,25 @@ func Test_CountWidgetSKUs(t *testing.T) {
 			})
 		}
 	})
+}
+
+// Example of writing a custom behavior that's not provided with the mockgres package.
+func Benchmark_CountWidgetSKUs(b *testing.B) {
+	delayBehavior := func(b *mockgres.MockBehaviors) {
+		b.RowCount = func(tableName string) (int, error) {
+			if strings.HasPrefix(tableName, "view_") {
+				time.Sleep(250 * time.Millisecond)
+			} else {
+				time.Sleep(20 * time.Millisecond)
+			}
+
+			return 30, nil
+		}
+	}
+
+	sut := New(mockgres.New(delayBehavior))
+
+	for n := 0; n < b.N; n++ {
+		sut.CountWidgetSKUs()
+	}
 }
