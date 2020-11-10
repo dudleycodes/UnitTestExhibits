@@ -10,8 +10,11 @@
         "gopath",
         "heatmap",
         "kernighan",
+        "mockgres",
         "neighborino",
         "nums",
+        "postgres",
+        "skus",
         "testcache",
         "walkthrough"
     ],
