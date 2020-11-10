@@ -39,7 +39,7 @@ func Test_CountWidgetSKUs(t *testing.T) {
 		}
 	})
 
-	t.Run("Count should get multipled by three to account for all colors", func(T *testing.T) {
+	t.Run("Count should get multiplied by three to account for all colors", func(T *testing.T) {
 		tests := map[string]struct {
 			expected int
 			behavior mockgres.Behavior
